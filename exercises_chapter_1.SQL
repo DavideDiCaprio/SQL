@@ -24,13 +24,13 @@ SELECT DISTINCT  ContactName,Address FROM Customers;
 
 /* 6. All values from the column CustomerID (from the Customers Table) where the customer id is bigger than 20. */
 
-SELECT * 
+SELECT CustomerID
 FROM Customers
 WHERE CustomerID > 20;
 
 /* 7. All values from the column CustomerID (from the Customers Table) where the customer id is smaller than 15. */
 
-SELECT * 
+SELECT CustomerID
 FROM Customers
 WHERE CustomerID < 15;
 
