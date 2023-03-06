@@ -1,9 +1,8 @@
 /*These exercises are based on the demo database hosted in the W3Schools tutorial. Please write the query in the row below the exercise.*/
 
-Exercises:
 
-1. All values from all columns and all rows from the table Customers.
-your query goes here.. */
+/* 1. All values from all columns and all rows from the table Customers. */
+/* your query goes here.. */
 
 /* 2. All values from all columns and rows from the table Suppliers. */
 
