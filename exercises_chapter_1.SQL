@@ -2,19 +2,22 @@
 
 
 /* 1. All values from all columns and all rows from the table Customers. */
+SELECT * FROM Customers
 /* your query goes here.. */
 
 /* 2. All values from all columns and rows from the table Suppliers. */
-
+SELECT * FROM Suppliers
 
 /* 3. All values from the columns SupplierID and Country from the table Supplier. */
-
+SELECT SupplierID,Country FROM Supplier
 
 /* 4. All values from the columns SupplierID and Country from the table Supplier (only distinct values). */
 
+SELECT DISTINCT SupplierID,Country FROM Supplier
 
 /* 5. All values from the columns ContactName and Address from the table Customers (only distinct values). */
 
+SELECT DISTINCT  ContactName,Address FROM Customers
 
 /* 6. All values from the column CustomerID (from the Customers Table) where the customer id is bigger than 20. */
 
