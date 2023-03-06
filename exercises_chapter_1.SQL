@@ -85,26 +85,34 @@ WHERE Country = 'Germany' AND CustomerID > 30;
 
 /* 16. All the values of Address for the rows whose Country is Japan and the SupplierID it less than 30 from the table Suppliers. */
 
-
+SELECT *
+FROM Suppliers
+WHERE Country = 'Japan' AND SupplierID <30;
 
 /* 17. All the values of Address for the rows whose Country is Japan or France from the table Suppliers (Sorted in ascending order). */
 
-SELECT *
-FROM 
+SELECT Address
+FROM Suppliers
+WHERE Country = 'Japan' OR Country = 'France'
+ORDER BY Address ASC;
 
 /* 18. All the values of PostalCode for the rows whose Country is Japan or France from the table Suppliers (Sorted in descending order). */
 
-SELECT *
-FROM 
+SELECT PostalCode
+FROM Suppliers
+WHERE Country = 'Japan' OR Country = 'France'
+ORDER BY PostalCode DESC;
 
 /* 19. All the values of SupplierName for the rows whose City is London or Manchester from the table Suppliers (Sorted by PostalCode in ascending order). */
 
-SELECT *
-FROM 
-ORDER BY;
+SELECT SupplierName
+FROM Suppliers
+WHERE City = 'London' OR City = 'Manchester'
+ORDER BY PostalCode ASC;
 
 /* 20. All the values of ContactName for the rows whose Country is Mexico or Sweden from the table Customers (Sorted by Address in descending order). */
 
-SELECT *
-FROM 
-ORDER BY;
+SELECT ContactName
+FROM Customers
+WHERE Country = 'Mexico' OR Country = 'Sweden'
+ORDER BY Address DESC;
