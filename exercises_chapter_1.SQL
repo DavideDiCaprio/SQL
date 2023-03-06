@@ -31,7 +31,7 @@
 /* 10. The value of ContactName for the row whose SupplierID is 5. */
 
 
-/* 11. The values of CustomerName for the row whose ContctName is ‘Ana Trujillo’. */
+/* 11. The values of CustomerName for the row whose ContctName is 'Ana Trujillo'. */
 
 
 /* 12. All the values of CustomerName for the rows whose City is Berlin from the table Customers. */
