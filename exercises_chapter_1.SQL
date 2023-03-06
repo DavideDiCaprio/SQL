@@ -7,14 +7,16 @@ SELECT * FROM Customers;
 /* your query goes here.. */
 
 /* 2. All values from all columns and rows from the table Suppliers. */
+
 SELECT * FROM Suppliers;
 
 /* 3. All values from the columns SupplierID and Country from the table Supplier. */
-SELECT SupplierID,Country FROM Supplier;
+
+SELECT SupplierID,Country FROM Suppliers;
 
 /* 4. All values from the columns SupplierID and Country from the table Supplier (only distinct values). */
 
-SELECT DISTINCT SupplierID,Country FROM Supplier;
+SELECT DISTINCT SupplierID,Country FROM Suppliers;
 
 /* 5. All values from the columns ContactName and Address from the table Customers (only distinct values). */
 
@@ -35,25 +37,25 @@ WHERE CustomerID < 15;
 /* 8. All values of all columns of the table Suppliers where the SupplierID is bigger than 35. */
 
 SELECT * 
-FROM Customers
+FROM Suppliers
 WHERE SupplierID > 35;
 
 /* 9. All values of ContactName for the rows whose SupplierID is bigger than 10 on the table Suppliers. */
 
-SELECT * 
-FROM Customers
-WHERE CustomerID > 35;
+SELECT ContactName
+FROM Suppliers
+WHERE SupplierID > 10;
 
 /* 10. The value of ContactName for the row whose SupplierID is 5. */
 
-SELECT *
-FROM Customers
-WHERE CustomerID = 5;
+SELECT ContactName
+FROM Suppliers
+WHERE SupplierID = 5;
 
 
 /* 11. The values of CustomerName for the row whose ContctName is 'Ana Trujillo'. */
 
-SELECT *
+SELECT CustomerName
 FROM Customers
 WHERE ContactName = 'Ana Trujillo';
 
@@ -81,33 +83,28 @@ SELECT *
 FROM Customers
 WHERE Country = 'Germany' AND CustomerID > 30;
 
-
 /* 16. All the values of Address for the rows whose Country is Japan and the SupplierID it less than 30 from the table Suppliers. */
 
-SELECT *
-FROM Customers
-WHERE ;
+
 
 /* 17. All the values of Address for the rows whose Country is Japan or France from the table Suppliers (Sorted in ascending order). */
 
 SELECT *
-FROM Customers
-WHERE ;
+FROM 
 
 /* 18. All the values of PostalCode for the rows whose Country is Japan or France from the table Suppliers (Sorted in descending order). */
 
 SELECT *
-FROM Customers
-WHERE ;
+FROM 
 
 /* 19. All the values of SupplierName for the rows whose City is London or Manchester from the table Suppliers (Sorted by PostalCode in ascending order). */
 
 SELECT *
-FROM Customers
+FROM 
 ORDER BY;
 
 /* 20. All the values of ContactName for the rows whose Country is Mexico or Sweden from the table Customers (Sorted by Address in descending order). */
 
 SELECT *
-FROM Customers
+FROM 
 ORDER BY;
