@@ -49,15 +49,25 @@ WHERE ContactName = 'Savastano Pietro';
 
 /* 9. Update the phone number of Pietro Savastano in the table Suppliers to be 081 - 000000. */
 
-UPDATE Phone
-SET 
-WHERE
+UPDATE Suppliers
+SET Phone = '081 - 000000'
+WHERE SupplierID = 31;
 
 /* 10. Update the row added at exercise 1 to change the CustomerName from ‘Macelleria’ to ‘Girarrosto’. */
 
+UPDATE Customers
+SET CustomerName = 'Girarrosto'
+WHERE CustomerID = 92;
+
 /* 11. Update all the rows of Suppliers where the City is Napoli to have the Country Honduras. */
 
+UPDATE
+SET
+
 /* 12. Update all the rows of Customers where the city is London or Frankfurt to have the CustomerName Parenzo. */
+
+UPDATE
+SET
 
 /* 13. Delete all the rows of Customers where Country is Germany. */
 
