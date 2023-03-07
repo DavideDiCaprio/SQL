@@ -4,13 +4,31 @@
 /* 1. Insert the row:[Macelleria, Antonio Grasso, via Sant’Anna 20, Benevento, 82019, Italy] in the table Customers. */
 /* your query goes here.. */
 
+INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES ('Macelleria', 'Antonio Grasso', 'via Sant’Anna 20', 'Benevento', '82019', 'Italy');
+
 /* 2. Write a query that returns the row that we just inserted (and no other row). */
+
+SELECT * 
+FROM Customers
+WHERE ContactName = 'Antonio Grasso'
 
 /* 3. Write a query to insert the details of Genny Savastano to the table Suppliers. */
 
+INSERT INTO Suppliers(ContactName)
+VALUES ('Genny Savastano'); 
+
 /* 4. Write a query that returns the row that we just inserted (and no other row). */
 
+SELECT * 
+FROM Suppliers
+WHERE ContactName = 'Genny Savastano'
+
 /* 5. Write a query that shows all the rows with a NULL value from the table Suppliers. */
+
+SELECT * 
+FROM Suppliers
+WHERE SupplierName IS NULL;
 
 /* 6. Write a query that shows all the rows with no NULL value from the table Suppliers. */
 
