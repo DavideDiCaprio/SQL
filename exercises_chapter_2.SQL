@@ -73,11 +73,11 @@ WHERE City = 'London' OR City = 'Frankfurt';
 
 /* 13. Delete all the rows of Customers where Country is Germany. */
 
-DELETE FROM WHERE 
+DELETE FROM Customers WHERE Country = 'Germany';
 
 /* 14. Delete the row of Customers where the CustomerID is 5. */
 
-DELETE FROM WHERE 
+DELETE FROM Customers WHERE CustomerID =5;
 
 /* 15. Delete the rows of Customers where the city is Berlin or Monaco. */
 
