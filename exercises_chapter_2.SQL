@@ -11,7 +11,7 @@ VALUES ('Macelleria', 'Antonio Grasso', 'via Sant’Anna 20', 'Benevento', '8201
 
 SELECT * 
 FROM Customers
-WHERE ContactName = 'Antonio Grasso'
+WHERE ContactName = 'Antonio Grasso';
 
 /* 3. Write a query to insert the details of Genny Savastano to the table Suppliers. */
 
@@ -22,7 +22,7 @@ VALUES ('Genny Savastano');
 
 SELECT * 
 FROM Suppliers
-WHERE ContactName = 'Genny Savastano'
+WHERE ContactName = 'Genny Savastano';
 
 /* 5. Write a query that shows all the rows with a NULL value from the table Suppliers. */
 
@@ -32,11 +32,26 @@ WHERE SupplierName IS NULL;
 
 /* 6. Write a query that shows all the rows with no NULL value from the table Suppliers. */
 
+SELECT * 
+FROM Suppliers
+WHERE SupplierName IS NOT NULL;
+
 /* 7. Write a query to insert a row for Savastano Pietro in the table Suppliers, leaving the phone number as NULL. */
+
+INSERT INTO Suppliers(SupplierName,ContactName,Address,City,PostalCode,Country)
+VALUES ('Secondigliano S.P.A','Savastano Pietro','Contrada Restinola','Secondigliano','80146','Italy');
 
 /* 8. Write a query that returns the row that we just inserted (and no other row) to make sure the phone number is NULL. */
 
+SELECT * 
+FROM Suppliers
+WHERE ContactName = 'Savastano Pietro';
+
 /* 9. Update the phone number of Pietro Savastano in the table Suppliers to be 081 - 000000. */
+
+UPDATE Phone
+SET 
+WHERE
 
 /* 10. Update the row added at exercise 1 to change the CustomerName from ‘Macelleria’ to ‘Girarrosto’. */
 
