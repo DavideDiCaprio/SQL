@@ -81,8 +81,8 @@ DELETE FROM Customers WHERE CustomerID =5;
 
 /* 15. Delete the rows of Customers where the city is Berlin or Monaco. */
 
-DELETE FROM WHERE 
+DELETE FROM Customers WHERE city = 'Berlin' OR city = 'Monaco';
 
 /* 16. Delete the rows of Suppliers where the city is different from Napoli. */
 
-DELETE FROM WHERE 
+DELETE FROM Suppliers WHERE city IS NOT 'Napoli';
