@@ -40,7 +40,12 @@ ORDER BY SupplierName; /* not sure yet about this solution*/
 
 /*The last CustomerID from the table Customers where the country is Germany or UK.*/
 
+SELECT CustomerID
+WHERE Country = 'Germany' or Country = 'UK'
+
 /*The full last row of the table Products.*/
+
+
 
 /*The average price from the table Products.*/
 
@@ -73,10 +78,14 @@ WHERE Country = 'USA';
 
 /*The total Quantity across all items for the OrderID 10248 from the table Orders.*/
 
-SELECT SUM(*)
+SELECT SUM(OrderID)
 FROM Orders
-WHERE OrderID = '10248';
+WHERE OrderID = 10248;
 
 /*The total Quantity across all items across the orders with OrderID 10248 and 10249, from the table Orders.*/
+
+SELECT SUM(OrderID)
+FROM Orders
+WHERE OrderID = 10248 AND OrderID = 10249;
 
 /*The total Quantity of the item with ProductID 11 across all orders in the table Order.*/
