@@ -31,25 +31,51 @@ WHERE Country = 'Germany' OR Country = 'USA';
 
 /*The SupplierName that comes last in alphabetical order from the table Suppliers.*/
 
+SELECT MAX(SupplierName) FROM Suppliers;
+
 /*The SupplierID of the SupplierName that comes first in alphabetical order from the table Suppliers.*/
+
+SELECT TOP 1 SupplierID FROM Suppliers
+ORDER BY SupplierName; /* not sure yet about this solution*/
 
 /*The last CustomerID from the table Customers where the country is Germany or UK.*/
 
 /*The full last row of the table Products.*/
 
-/*The full first row of the table Customers.*/
-
 /*The average price from the table Products.*/
+
+SELECT AVG(Price)
+FROM Products;
 
 /*The average price from the table Products with the SupplierID 2.*/
 
+SELECT AVG(Price)
+FROM Products
+WHERE SupplierID = 2;
+
 /*The average price from the table Products with the CategoryID 1 or 2.*/
+
+SELECT AVG(Price)
+FROM Products
+WHERE CategoryID = 1 OR CategoryID = 2;
 
 /*The number of items with the SupplierID 3 from the table Products.*/
 
+SELECT COUNT(*)
+FROM Products
+WHERE SupplierID = 3;
+
 /*The number of different City for the Country USA in the table Suppliers.*/
 
+SELECT COUNT( DISTINCT City) 
+FROM Customers
+WHERE Country = 'USA';
+
 /*The total Quantity across all items for the OrderID 10248 from the table Orders.*/
+
+SELECT SUM(*)
+FROM Orders
+WHERE OrderID = '10248';
 
 /*The total Quantity across all items across the orders with OrderID 10248 and 10249, from the table Orders.*/
 
