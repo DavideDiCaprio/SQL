@@ -5,14 +5,24 @@ ORDER BY CustomerName ASC;
 
 /*The last 15 CustomerName from the table Customers in alphabetical order.*/
 
-
+SELECT TOP 15 * FROM Customers
+ORDER BY CustomerID DESC,CustomerName ASC;
 
 /*The first 10 unique Countries from the table Customers sorted alphabetically.*/
 
-
+SELECT DISTINCT TOP 10 * FROM Customers
+ORDER BY CustomerName ASC;
 
 /*The 10 Countries from the table Customers of the rows with the first 10 CustomerName sorted alphabetically.*/
+
+SELECT TOP 10 (Country) FROM Customers
+ORDER BY CustomerName ASC;
+
+
 /*The SupplierName that comes first in alphabetical order from the table Suppliers.*/
+
+
+
 /*The CustomerName that comes first in alphabetical order from the table Customers where the country is Germany or USA.*/
 /*The SupplierName that comes last in alphabetical order from the table Suppliers.*/
 /*The SupplierID of the SupplierName that comes first in alphabetical order from the table Suppliers.*/
