@@ -1,3 +1,5 @@
+/*These exercises are based on the demo database hosted in the W3Schools tutorial.*/
+
 /*The first 10 CustomerName from the table Customers sorted alphabetically.*/
 
 SELECT TOP 10 * FROM Customers
@@ -10,7 +12,7 @@ ORDER BY CustomerID DESC,CustomerName ASC;
 
 /*The first 10 unique Countries from the table Customers sorted alphabetically.*/
 
-SELECT DISTINCT TOP 10 * FROM Customers
+SELECT DISTINCT TOP 10 CustomerName FROM Customers
 ORDER BY CustomerName ASC;
 
 /*The 10 Countries from the table Customers of the rows with the first 10 CustomerName sorted alphabetically.*/
