@@ -4,8 +4,6 @@
 
 SELECT * FROM Customers;
 
-/* your query goes here.. */
-
 /* 2. All values from all columns and rows from the table Suppliers. */
 
 SELECT * FROM Suppliers;
@@ -52,7 +50,6 @@ SELECT ContactName
 FROM Suppliers
 WHERE SupplierID = 5;
 
-
 /* 11. The values of CustomerName for the row whose ContctName is 'Ana Trujillo'. */
 
 SELECT CustomerName
@@ -73,13 +70,13 @@ WHERE City = 'Berlin' or City = 'London';
 
 /* 14. All the values of CustomerName for the rows whose City is Berlin and the CustomerID is bigger than 30 from the table Customers. */
 
-SELECT *
+SELECT CustomerName
 FROM Customers
 WHERE City = 'Berlin' AND CustomerID > 30;
 
 /* 15. All the values of CustomerName for the rows whose Country is Germany and the CustomerID is bigger than 30 from the table Customers. */
 
-SELECT *
+SELECT CustomerName
 FROM Customers
 WHERE Country = 'Germany' AND CustomerID > 30;
 
