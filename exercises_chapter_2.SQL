@@ -2,7 +2,6 @@
 
 
 /* 1. Insert the row:[Macelleria, Antonio Grasso, via Sant’Anna 20, Benevento, 82019, Italy] in the table Customers. */
-/* your query goes here.. */
 
 INSERT INTO Customers (CustomerName, ContactName, Address, City, PostalCode, Country)
 VALUES ('Macelleria', 'Antonio Grasso', 'via Sant’Anna 20', 'Benevento', '82019', 'Italy');
