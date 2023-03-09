@@ -45,7 +45,9 @@ WHERE Country = 'Germany' or Country = 'UK'
 
 /*The full last row of the table Products.*/
 
-
+SELECT TOP 1 * 
+FROM Customers
+ORDER BY CustomerID DESC;
 
 /*The average price from the table Products.*/
 
@@ -89,3 +91,7 @@ FROM Orders
 WHERE OrderID = 10248 AND OrderID = 10249;
 
 /*The total Quantity of the item with ProductID 11 across all orders in the table Order.*/
+
+SELECT COUNT(CustomerID)
+FROM Orders
+WHERE CustomerID = 11;
