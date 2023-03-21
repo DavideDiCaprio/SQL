@@ -2,7 +2,13 @@
 
 /*1. Perform an inner join on CustomerID on the tables Orders and Customers.*/
 
+SELECT Customers.CustomerID, Orders.CustomerID
+FROM Customers
+INNER JOIN Orders ON Orders.CustomerID = Customers.CustomerID;
+
 /*2. The CustomerName of all the customers with at least three orders in the table Orders.*/
+
+
 
 /*3. The OrderID of all the orders whose customer is based in Berlin.*/
 
