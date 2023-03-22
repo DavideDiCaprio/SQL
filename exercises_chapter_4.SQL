@@ -8,11 +8,31 @@ INNER JOIN Orders ON Orders.CustomerID = Customers.CustomerID;
 
 /*2. The OrderID of all the orders whose customer is based in Berlin.*/
 
+SELECT OrderID
+FROM Orders
+JOIN Customers ON Customers.CustomerID = Orders.CustomerID
+WHERE Customers.City = 'Berlin';
+
 /*3. The OrderID of all the orders whose associated Employee has the first name Adam.*/
+
+SELECT OrderID
+FROM Orders
+JOIN Employees ON Employees.EmployeeID = Orders.CustomerID
+WHERE Employees.FirstName = 'Adam';
 
 /*4. The OrderID of all the orders whose associated Employee's first name starts with 'A'.*/
 
+SELECT OrderID
+FROM Orders
+JOIN Employees ON Employees.EmployeeID = Orders.CustomerID
+WHERE Employees.FirstName LIKE 'A%';
+
 /*5. The OrderID, Employee's LastName, FirstName and BirthDate of all the orders whose associated Employee is born after 1965.*/
+
+SELECT OrderID,LastName,FristName,BirthDate
+FROM Orders
+JOIN Employees ON Employees.EmployeeID = Orders.CustomerID
+WHERE Employees.BirthDate ;
 
 /*6. The CustomerID of all the customers that have no associated order.*/
 
