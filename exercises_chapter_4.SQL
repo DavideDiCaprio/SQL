@@ -50,7 +50,14 @@ WHERE Orders.CustomerID IS NULL;
 
 /*8. All CustomerIDs and the number of orders they are associated with.*/
 
+SELECT Customers.CustomerID, COUNT(Orders.CustomerID) AS NumberOfOrders 
+FROM Customers
+LEFT JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+GROUP BY Customers.CustomerID;
+
 /*9. All CustomerIDs and the biggest OrderID they are associated with.*/
+
+
 
 /*10. All CustomerIDs associated with more than 3 orders.*/
 
