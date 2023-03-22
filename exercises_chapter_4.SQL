@@ -32,11 +32,21 @@ WHERE Employees.FirstName LIKE 'A%';
 SELECT OrderID,LastName,FristName,BirthDate
 FROM Orders
 JOIN Employees ON Employees.EmployeeID = Orders.CustomerID
-WHERE Employees.BirthDate ;
+WHERE Employees.BirthDate LIKE '1960%'; /* ?? */
 
 /*6. The CustomerID of all the customers that have no associated order.*/
 
+SELECT Customers.CustomerID
+FROM Customers
+LEFT JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+WHERE Orders.CustomerID IS NULL;
+
 /*7. How many customers have no associated order?*/
+
+SELECT COUNT(Customers.CustomerID)
+FROM Customers
+LEFT JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+WHERE Orders.CustomerID IS NULL;
 
 /*8. All CustomerIDs and the number of orders they are associated with.*/
 
