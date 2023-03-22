@@ -61,4 +61,9 @@ GROUP BY Customers.CustomerID;
 
 /*10. All CustomerIDs associated with more than 3 orders.*/
 
+SELECT Customers.CustomerID, COUNT(Orders.CustomerID) AS NumberOfOrders 
+FROM Customers
+LEFT JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+GROUP BY Customers.CustomerID
+HAVING COUNT(Orders.CustomerID) > 3;
 
