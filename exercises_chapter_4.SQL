@@ -57,7 +57,11 @@ GROUP BY Customers.CustomerID;
 
 /*9. All CustomerIDs and the biggest OrderID they are associated with.*/
 
-
+SELECT Customers.CustomerID, Orders.OrderID
+FROM Customers
+JOIN Orders ON Orders.CustomerID = Customers.CustomerID
+GROUP BY Customers.CustomerID
+HAVING MAX(Orders.OrderID);
 
 /*10. All CustomerIDs associated with more than 3 orders.*/
 
