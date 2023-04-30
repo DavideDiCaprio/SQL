@@ -42,32 +42,31 @@ CREATE TABLE Customer_Details(
 	Full_Name VARCHAR(50),
 	Affiliated BOOL,
 	User_since YEAR,
-	Region VARCHAR(30),
+	Balance FLOAT,
 	PRIMARY KEY (),
 	FOREIGN KEY () REFERENCES ()
 );
 
 
-INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since,Region) VALUES
-		(1,'Giuseppe Nuzzo',1,2020,'Lombardia'),
-		(2,'Nicola Taormina',0,2021,'Lazio'),
-		(3,'Pit Capezzone',0,2020,'Campania'),
-		(4,'Antonio Santoro',1,2019,'Campania'),
-		(5,'Paul Cruciani',1,2018,'Lazio'),
-		(6,'Giuseppe Marra',0,2019,'Lombardia'),
-		(7,'Mauro Marra',0,2022,'Lombardia')
-		;
+INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since) VALUES
+		(1,'Giuseppe Nuzzo',1,2020,230.40),
+		(2,'Nicola Taormina',0,2021,),
+		(3,'Pit Capezzone',0,2020,53.00),
+		(4,'Antonio Santoro',1,2019,160.90),
+		(5,'Paul Cruciani',1,2018),
+		(6,'Giuseppe Marra',0,2019),
+		(7,'Mauro Marra',0,2022);
 
 
- Customer_ID |    Full_Name    |   Affiliated   |  User_since |  Region 
+ Customer_ID |    Full_Name    |   Affiliated   |  User_since | Balance 
 -------------+-----------------+----------------+-------------+----------
-        1    | Giuseppe Nuzzo  |   TRUE         | 2020        |  Lombardia
-        2    | Nicola Taormina |   FALSE        | 2021        |  Lazio 
-        3    | Pit Capezzone   |   FALSE        | 2020        |  Campania  
-        4    | Antonio Santoro |   TRUE         | 2019        |  Campania
-        5    | Paul Cruciani   |   TRUE         | 2018        |  Lazio   
-        6    | Giuseppe Marra  |   FALSE        | 2019        |  Lombardia 
-        7    | Mauro    Marra  |   FALSE        | 2022        |  Lombardia   
+        1    | Giuseppe Nuzzo  |   TRUE         | 2020        |  230.40
+        2    | Nicola Taormina |   FALSE        | 2021        |  NULL
+        3    | Pit Capezzone   |   FALSE        | 2020        |  NULL
+        4    | Antonio Santoro |   TRUE         | 2019        |  53.00
+        5    | Paul Cruciani   |   TRUE         | 2018        |  160.90   
+        6    | Giuseppe Marra  |   FALSE        | 2019        |  NULL
+        7    | Mauro    Marra  |   FALSE        | 2022        |  NULL
 
 
 CREATE TABLE Orders ();
@@ -85,9 +84,9 @@ INSERT INTO Orders () VALUES
 		(),
 		;
 
- Order_ID | Customer_ID   |  Product  | 
-----------+---------------+-----------+
-      1   |       1       |           |
+ Order_ID | Customer_ID   |  Product_ID  | 
+----------+---------------+--------------+
+      1   |       1       |              |
       2   |       4       |           |  
       3   |       5       |           |  
       4   |       1       |           |  
@@ -98,7 +97,7 @@ INSERT INTO Orders () VALUES
       9   |       5       |           |
       10  |       3       |           |  
 
-CREATE TABLE Products ();
+CREATE TABLE Products();
 
 INSERT INTO 
 VALUES();
@@ -108,15 +107,3 @@ VALUES();
   |         |        |
  
 	
-	
-	
-	
- Customer_ID |   |    |   |  | |  
--------------+---+----+---+--+--+
-        1    |   |    |   |  | |
-        3    |   |    |   |  | |
-        4    |   |    |   |  | |
-        4    |   |    |   |  | |
-        3    |   |    |   |  | |
-        7    |   |    |   |  | |
-        5    |   |    |   |  | |
