@@ -72,12 +72,11 @@ INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since) VALUE
 CREATE TABLE Orders ();
 
 CREATE TABLE Orders (
-	INT,
-	VARCHAR(50),
+	Order_ID INT,
+	Customer_IDVARCHAR(50),
 	Processed BOOL,
 	VARCHAR(30),
 	PRIMARY KEY (),
-	FOREIGN KEY () REFERENCES ()
 );
 
 INSERT INTO Orders () VALUES
@@ -86,24 +85,36 @@ INSERT INTO Orders () VALUES
 
  Order_ID | Customer_ID   |  Product_ID  | Processed
 ----------+---------------+--------------+----------
-      1   |       1       |              |
-      2   |       4       |           |  
-      3   |       5       |           |  
-      4   |       1       |           |  
-      5   |       6       |           |  
-      6   |       1       |           |  
-      7   |       1       |           |  
-      8   |       7       |           |  
-      9   |       5       |           |
-      10  |       3       |           |  
+      1   |       7       |   ID2032     | TRUE
+      2   |       4       |   ID3044     | TRUE
+      3   |       5       |   ID2032     | FALSE
+      4   |       1       |   ID4067     | FALSE 
+      5   |       6       |   ID3044     | FALSE 
+      6   |       1       |   ID2032     | TRUE 
+      7   |       1       |   ID2032     | TRUE 
+      8   |       7       |   ID1046     | TRUE 
+      9   |       5       |   ID3044     | FALSE
+      11  |       2       |   ID2032     | TRUE 
+      12  |       3       |   ID3044     | FALSE 
+      13  |       6       |   ID2032     | TRUE 
+      14  |       3       |   ID2032     | TRUE 
+      15  |       3       |   ID1046     | TRUE 
 
-CREATE TABLE Products();
 
-INSERT INTO 
-VALUES();
+CREATE TABLE Products (
+	Product_ID VARCHAR(6),
+	Prize FLOAT,
+	PRIMARY KEY (Product_ID)
+);
 
- Product_ID | Prize  |     
---+---------+--------+
-  |         |        |
- 
-	
+
+INSERT INTO Products(Product_ID,Prize) VALUES
+		('ID2032',49.99),
+		('ID3044',99.99),
+		('ID1046',70.00);
+
+ Product_ID | Prize       
+------------+---------
+  ID2032    |  49.99  
+  ID3044    |  99.99      
+  ID1046    |  70.00   
