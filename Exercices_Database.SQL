@@ -16,10 +16,10 @@ INSERT INTO Customers (Customer_ID,User_Name,City,Birth_Date) VALUES
 		(1, 'Nuzzo_99','Milano','02/03/1999'),
 		(2, 'Nicola_89','Roma','11/03/1989'),
 		(3, '76_Capezzone','Napoli','15/03/1976'),
-		(4, 'Santorooro','Benevento','29/10/1999'),
-		(5, 'Crux','Roma','02/03/1999'),
-		(6, 'MrMarra','Bergamo','02/03/1999'),
-		(7, 'MauroDaMantova','Mantova','02/03/1999');
+		(4, 'Santorooro','Benevento','29/10/1981'),
+		(5, 'Crux','Roma','07/09/1995'),
+		(6, 'MrMarra','Bergamo','11/11/1999'),
+		(7, 'MauroDaMantova','Mantova','02/12/1969');
 
 
 /*** a visual rappresentation of DB ***/
@@ -34,7 +34,7 @@ table Customers
         4    |  Santorooro     | Benevento| 29/10/1999      
         5    |  Crux           | Roma     | 17/08/1980      
         6    |  MrMarra        | Bergamo  | 28/07/1992      
-        7    |  MauroDaMantova | Mantova  | 04/11/1960  
+        7    |  MauroDaMantova | Mantova  | 02/12/1969  
 	
 
 CREATE TABLE Customer_Details(
@@ -74,7 +74,7 @@ CREATE TABLE Orders ();
 CREATE TABLE Orders (
 	INT,
 	VARCHAR(50),
-	BOOL,
+	Processed BOOL,
 	VARCHAR(30),
 	PRIMARY KEY (),
 	FOREIGN KEY () REFERENCES ()
@@ -84,8 +84,8 @@ INSERT INTO Orders () VALUES
 		(),
 		;
 
- Order_ID | Customer_ID   |  Product_ID  | 
-----------+---------------+--------------+
+ Order_ID | Customer_ID   |  Product_ID  | Processed
+----------+---------------+--------------+----------
       1   |       1       |              |
       2   |       4       |           |  
       3   |       5       |           |  
