@@ -19,7 +19,8 @@ INSERT INTO Customers (Customer_ID,User_Name,City,Birth_Date) VALUES
 		(4, 'Santorooro','Benevento','29/10/1981'),
 		(5, 'Crux','Roma','07/09/1995'),
 		(6, 'MrMarra','Bergamo','11/11/1999'),
-		(7, 'MauroDaMantova','Mantova','02/12/1969');
+		(7, 'MauroDaMantova','Mantova','02/12/1969')
+		(8,'Paparenzo', 'Roma','14,11,1995');
 
 
 /*** a visual rappresentation of DB ***/
@@ -35,6 +36,8 @@ table Customers
         5    |  Crux           | Roma     | 17/08/1980      
         6    |  MrMarra        | Bergamo  | 28/07/1992      
         7    |  MauroDaMantova | Mantova  | 02/12/1969  
+	8    |  Paparenzo      | Roma     | 14/11/1995 
+
 	
 
 CREATE TABLE Customer_Details(
@@ -54,7 +57,8 @@ INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since,Balanc
 		(4,'Antonio Santoro',TRUE,2019,53.00),
 		(5,'Paul Cruciani',TRUE,2018,160.90),
 		(6,'Giuseppe Marra',FALSE,2019,NULL),
-		(7,'Mauro Marra',FALSE,2022,NULL);
+		(7,'Mauro Marra',FALSE,2022,NULL),
+		(8,'Paolo Parenzo,TRUE,2016,430.70);
 
 
  Customer_ID |    Full_Name    |   Affiliated   |  User_since | Balance 
@@ -66,6 +70,7 @@ INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since,Balanc
         5    | Paul Cruciani   |   TRUE         | 2018        |  160.90   
         6    | Giuseppe Marra  |   FALSE        | 2019        |  NULL
         7    | Mauro    Marra  |   FALSE        | 2022        |  NULL
+        8    | Paolo   Parenzo |   TRUE         | 2016        |  430.70
 
 
 CREATE TABLE Orders ();
