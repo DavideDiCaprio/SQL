@@ -43,19 +43,18 @@ CREATE TABLE Customer_Details(
 	Affiliated BOOL,
 	User_since YEAR,
 	Balance FLOAT,
-	PRIMARY KEY (),
-	FOREIGN KEY () REFERENCES ()
+	PRIMARY KEY (Full_Name)
 );
 
 
-INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since) VALUES
-		(1,'Giuseppe Nuzzo',1,2020,230.40),
-		(2,'Nicola Taormina',0,2021,),
-		(3,'Pit Capezzone',0,2020,53.00),
-		(4,'Antonio Santoro',1,2019,160.90),
-		(5,'Paul Cruciani',1,2018),
-		(6,'Giuseppe Marra',0,2019),
-		(7,'Mauro Marra',0,2022);
+INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since,Balance) VALUES
+		(1,'Giuseppe Nuzzo',TRUE,2020,230.40),
+		(2,'Nicola Taormina',FALSE,2021,NULL),
+		(3,'Pit Capezzone',FALSE,2020,NULL),
+		(4,'Antonio Santoro',TRUE,2019,53.00),
+		(5,'Paul Cruciani',TRUE,2018,160.90),
+		(6,'Giuseppe Marra',FALSE,2019,NULL),
+		(7,'Mauro Marra',FALSE,2022,NULL);
 
 
  Customer_ID |    Full_Name    |   Affiliated   |  User_since | Balance 
@@ -73,14 +72,28 @@ CREATE TABLE Orders ();
 
 CREATE TABLE Orders (
 	Order_ID INT,
-	Customer_IDVARCHAR(50),
+	Customer_ID VARCHAR(50),
 	Processed BOOL,
 	VARCHAR(30),
-	PRIMARY KEY (),
+	PRIMARY KEY (Order_ID),
 );
 
-INSERT INTO Orders () VALUES
-		(),
+INSERT INTO Orders (Order_ID,Customer_ID,Product_ID,Processed) VALUES
+		(1,7,'ID2032',TRUE),
+		(2,4,'ID3044',TRUE),
+		(3,5,'ID2032',FALSE),
+		(4,1,'ID2032',FALSE),
+		(5,6,'ID2032',FALSE),
+		(6,1,'ID2032',TRUE),
+		(7,1,'ID2032',TRUE),
+		(8,7,'ID2032',TRUE),
+		(9,5,'ID2032',FALSE),
+		(10,2,'ID2032',TRUE),
+		(11,3,'ID2032',TRUE),
+		(12,6,'ID2032',TRUE),
+		(13,3,'ID2032',TRUE),
+		(14,7,'ID2032',TRUE),
+		(15,7,'ID2032',TRUE),
 		;
 
  Order_ID | Customer_ID   |  Product_ID  | Processed
@@ -94,11 +107,13 @@ INSERT INTO Orders () VALUES
       7   |       1       |   ID2032     | TRUE 
       8   |       7       |   ID1046     | TRUE 
       9   |       5       |   ID3044     | FALSE
-      11  |       2       |   ID2032     | TRUE 
-      12  |       3       |   ID3044     | FALSE 
-      13  |       6       |   ID2032     | TRUE 
-      14  |       3       |   ID2032     | TRUE 
-      15  |       3       |   ID1046     | TRUE 
+      10  |       2       |   ID2032     | TRUE 
+      11  |       3       |   ID3044     | FALSE 
+      12  |       6       |   ID2032     | TRUE 
+      13  |       3       |   ID2032     | TRUE 
+      14  |       5       |   ID1046     | TRUE
+      15  |       5       |   ID1046     | TRUE 
+
 
 
 CREATE TABLE Products (
