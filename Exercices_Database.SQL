@@ -58,7 +58,7 @@ INSERT INTO Customer_Details (Customer_ID,Full_Name,Affiliated,User_since,Balanc
 		(5,'Paul Cruciani',TRUE,2018,160.90),
 		(6,'Giuseppe Marra',FALSE,2019,NULL),
 		(7,'Mauro Marra',FALSE,2022,NULL),
-		(8,'Paolo Parenzo,TRUE,2016,430.70);
+		(8,'Paolo Parenzo',TRUE,2016,430.70);
 
 
  Customer_ID |    Full_Name    |   Affiliated   |  User_since | Balance 
@@ -103,35 +103,34 @@ INSERT INTO Orders (Order_ID,Customer_ID,Product_ID,Processed) VALUES
 
  Order_ID | Customer_ID   |  Product_ID  | Processed
 ----------+---------------+--------------+----------
-      1   |       7       |   ID2032     | TRUE
-      2   |       4       |   ID3044     | TRUE
-      3   |       5       |   ID2032     | FALSE
-      4   |       1       |   ID4067     | FALSE 
-      5   |       6       |   ID3044     | FALSE 
-      6   |       1       |   ID2032     | TRUE 
-      7   |       1       |   ID2032     | TRUE 
-      8   |       7       |   ID1046     | TRUE 
-      9   |       5       |   ID3044     | FALSE
-      10  |       2       |   ID2032     | TRUE 
-      11  |       3       |   ID3044     | FALSE 
-      12  |       6       |   ID2032     | TRUE 
-      13  |       3       |   ID2032     | TRUE 
-      14  |       5       |   ID1046     | TRUE
-      15  |       5       |   ID1046     | TRUE 
+      1   |       7       |   D2032     | TRUE
+      2   |       4       |   D3044     | TRUE
+      3   |       5       |   D2032     | FALSE
+      4   |       1       |   D4067     | FALSE 
+      5   |       6       |   D3044     | FALSE 
+      6   |       1       |   D2032     | TRUE 
+      7   |       1       |   D2032     | TRUE 
+      8   |       7       |   D1046     | TRUE 
+      9   |       5       |   D3044     | FALSE
+      10  |       2       |   D2032     | TRUE 
+      11  |       3       |   D3044     | FALSE 
+      12  |       6       |   D2032     | TRUE 
+      13  |       3       |   D2032     | TRUE 
+      14  |       5       |   D1046     | TRUE
+      15  |       5       |   D1046     | TRUE 
 
 
 
 CREATE TABLE Products (
-	Product_ID VARCHAR(6),
+	Product_ID VARCHAR(6) UNIQUE,
 	Prize FLOAT,
 	PRIMARY KEY (Product_ID)
 );
 
-
 INSERT INTO Products(Product_ID,Prize) VALUES
-		('ID2032',49.99),
-		('ID3044',99.99),
-		('ID1046',70.00);
+		('D2032',49.99),
+		('D3044',99.99),
+		('D1046',70.00);
 
  Product_ID | Prize       
 ------------+---------
