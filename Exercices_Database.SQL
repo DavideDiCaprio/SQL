@@ -77,36 +77,35 @@ CREATE TABLE Orders ();
 
 CREATE TABLE Orders (
 	Order_ID INT,
-	Customer_ID VARCHAR(50),
+	Customer_ID INT,
+	Product_ID VARCHAR(6),
 	Processed BOOL,
-	VARCHAR(30),
-	PRIMARY KEY (Order_ID),
+	PRIMARY KEY (Order_ID)
 );
 
 INSERT INTO Orders (Order_ID,Customer_ID,Product_ID,Processed) VALUES
-		(1,7,'ID2032',TRUE),
-		(2,4,'ID3044',TRUE),
-		(3,5,'ID2032',FALSE),
-		(4,1,'ID2032',FALSE),
-		(5,6,'ID2032',FALSE),
-		(6,1,'ID2032',TRUE),
-		(7,1,'ID2032',TRUE),
-		(8,7,'ID2032',TRUE),
-		(9,5,'ID2032',FALSE),
-		(10,2,'ID2032',TRUE),
-		(11,3,'ID2032',TRUE),
-		(12,6,'ID2032',TRUE),
-		(13,3,'ID2032',TRUE),
-		(14,7,'ID2032',TRUE),
-		(15,7,'ID2032',TRUE),
-		;
+		(1,7,'D2032',TRUE),
+		(2,4,'D3044',TRUE),
+		(3,5,'D2032',FALSE),
+		(4,1,'D3044',FALSE),
+		(5,6,'D3044',FALSE),
+		(6,1,'D2032',TRUE),
+		(7,1,'D2032',TRUE),
+		(8,7,'D2032',TRUE),
+		(9,5,'D3044',FALSE),
+		(10,2,'D2032',TRUE),
+		(11,3,'D3044',FALSE),
+		(12,6,'D2032',TRUE),
+		(13,3,'D2032',TRUE),
+		(14,5,'D1046',TRUE),
+		(15,5,'D1046',TRUE);
 
  Order_ID | Customer_ID   |  Product_ID  | Processed
 ----------+---------------+--------------+----------
       1   |       7       |   D2032     | TRUE
       2   |       4       |   D3044     | TRUE
       3   |       5       |   D2032     | FALSE
-      4   |       1       |   D4067     | FALSE 
+      4   |       1       |   D3044     | FALSE 
       5   |       6       |   D3044     | FALSE 
       6   |       1       |   D2032     | TRUE 
       7   |       1       |   D2032     | TRUE 
@@ -118,7 +117,6 @@ INSERT INTO Orders (Order_ID,Customer_ID,Product_ID,Processed) VALUES
       13  |       3       |   D2032     | TRUE 
       14  |       5       |   D1046     | TRUE
       15  |       5       |   D1046     | TRUE 
-
 
 
 CREATE TABLE Products (
