@@ -1,6 +1,5 @@
 /* Exercices based on */
 
-
 /* Select all User_Name from the younger to the oldest.*/
 
 SELECT User_Name
@@ -27,4 +26,7 @@ WHERE Full_Name = "Nicola Taormina";
 
 /* Print the most selled product from table Orders */
 
-SELECT 
+SELECT COUNT(Product_ID), Product_ID
+FROM Orders
+GROUP BY Product_ID
+ORDER BY COUNT(Product_ID) DESC LIMIT 1;
