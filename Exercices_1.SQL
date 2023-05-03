@@ -20,3 +20,11 @@ ORDER BY User_Since ASC
 LIMIT 3;
 
 /* update user Taormina in affiliated and set his balance to 100.00 */
+
+UPDATE Customer_Details
+SET Affiliated = True, Balance = 100
+WHERE Full_Name = "Nicola Taormina";
+
+/* Print the most selled product from table Orders */
+
+SELECT 
