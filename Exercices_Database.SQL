@@ -121,16 +121,16 @@ INSERT INTO Orders (Order_ID,Customer_ID,Product_ID,Processed) VALUES
 
 CREATE TABLE Products (
 	Product_ID VARCHAR(6) UNIQUE,
-	Prize FLOAT,
+	Price FLOAT,
 	PRIMARY KEY (Product_ID)
 );
 
-INSERT INTO Products(Product_ID,Prize) VALUES
+INSERT INTO Products(Product_ID,Price) VALUES
 		('D2032',49.99),
 		('D3044',99.99),
 		('D1046',70.00);
 
- Product_ID | Prize       
+ Product_ID | Price       
 ------------+---------
   ID2032    |  49.99  
   ID3044    |  99.99      
