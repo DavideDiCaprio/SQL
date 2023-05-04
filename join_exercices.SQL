@@ -6,4 +6,8 @@ SELECT Customer_Details.Full_Name, Customers.User_Name
 FROM Customer_Details
 JOIN Customers ON Customer_Details.Customer_ID = Customers.Customer_ID;
 
-/*2. Write a SQL statment to print  */
+/*2.  */
+
+SELECT COUNT(Orders.Product_ID) AS "Processed Orders", SUM(Products.Price) AS "Total price"
+FROM Orders
+JOIN Products ON Orders.Product_ID = Products.Product_ID;
