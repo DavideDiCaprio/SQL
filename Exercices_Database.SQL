@@ -20,7 +20,7 @@ INSERT INTO Customers (Customer_ID,User_Name,City,Birth_Date) VALUES
 		(5, 'Crux','Roma','07/09/1995'),
 		(6, 'MrMarra','Bergamo','11/11/1999'),
 		(7, 'MauroDaMantova','Mantova','02/12/1969')
-		(8,'Paparenzo', 'Roma','14,11,1995');
+		(8, 'Paparenzo', 'Roma','14,11,1995');
 
 
 /*** a visual rappresentation of DB ***/
